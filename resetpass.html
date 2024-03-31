@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FARM HOUSE</title>
+    <link rel="shortcut icon" href="./icon.webp"/>
+    <style>
+        body{
+            text-align: center;
+            background-image: url('./grocery.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: 0-10vh;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            width: 200dvh;
+            height: 100vh;
+            
+        }
+        h2{
+            font-style: italic;
+            color:rgb(255, 253, 253);
+            font-size: xx-large;
+        }
+        label{
+            display:block;
+            margin:5px auto;
+            font-size: x-large;
+        }
+        div{
+            border: 3px solid black;
+            background-color: rgba(128, 0, 0, 0.336);
+            padding: 50px;
+            border-radius: 30px;
+            border-color:maroon;
+            text-align: right;
+            margin-left: 500px;
+        }
+        p{
+            color:black;
+            font-variant: small-caps;
+            background-color: rgba(165, 42, 42, 0.644);
+        }
+    </style>
+    <script>
+        // Password Validation
+        function signup_validation(){
+        var Password=document.getElementById("password").value 
+        var flag_password=false
+        var upper=0
+        var lower=0
+        var Num=0
+        var special=0
+        for(var i=0;i<Password.length;i++){
+            if(('A'<=Password[i])&&(Password[i]<='Z')){
+                upper++
+            }else if(('a'<=Password[i])&&(Password[i]<='z')){
+                lower++
+            }else if(('0'<=Password[i])&&(Password[i]<='9')){
+                Num++
+            }else{
+                special++
+            }
+        }
+        if((upper>=1)&&(lower>=1)&&(Num>=1)&&(special>=1)&&(Password.length>=8)&&(Password.length<=12)){
+            flag_password=true
+        }
+
+
+        // Confirm Password Validation
+        var confirm=document.getElementById("confirm").value 
+        var flag_confirm=false
+        if(Password==confirm){
+            flag_confirm=true
+        }
+
+
+        // Final Validation
+        if((flag_password==true)&&(flag_confirm==true)){
+            window.location.href="./index.html"
+        }
+        else{
+                document.getElementById("error").innerHTML="Invalid Details"
+                document.getElementById("error").style.color="red"
+        }
+    }
+</script>
+</head>
+<body>
+    <div>
+        <h2>Reset Password</h2>
+            <input type="text" placeholder="Password" id="password">
+    <br>
+    <br>
+    <input type="text" placeholder="Confirm Password" id="confirm">
+    <br>
+    <br>
+    <button onclick="signup_validation()">Register</button>
+    <p id="error"></p>
+     </div>
+</body>
+</html>

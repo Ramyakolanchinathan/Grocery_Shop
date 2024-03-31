@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FARM HOUSE</title>
+    <link rel="shortcut icon" href="./icon.webp"/>
+    <style>
+        body{
+            text-align: center;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://e1.pxfuel.com/desktop-wallpaper/509/667/desktop-wallpaper-best-4-vegetable-backgrounds-on-hip-veg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+           
+            
+        }
+        h2{
+            font-style: italic;
+            color:rgb(236, 231, 231);
+            font-size: xx-large;
+        }
+        input label{
+            display:block;
+            margin:5px auto;
+        }
+        div{
+            border: 3px solid black;
+            background-color: rgba(128, 0, 0, 0.336);
+            padding: 50px;
+            border-radius: 30px;
+            border-color:maroon;
+            margin-top: 100px;
+        }
+        p{
+            color:rgb(235, 212, 212);
+            font-variant: small-caps;
+            background-color: rgba(14, 1, 1, 0.644);
+            font-weight:bolder;
+        }
+        button{
+            margin-left:50px;
+            margin-top: 15px;
+            border-radius: 5px;
+            background-image: linear-gradient(to right,rgba(100,50,0,0),rgba(100, 0, 0, 0.733));
+            
+        }
+        a{
+            text-decoration: none;
+            font-size: larger;
+        }
+    </style>
+    <script>
+        function login_Validation(){
+            var db={'Qspiders':'Qsp@1234','Jspiders':'Jsp@3456','Pyspiders':'PySp@0345','Ramya':'Ramya@19'}
+            var username=document.getElementById("username").value 
+            var password=document.getElementById("password").value
+            var all_users=Object.keys(db)
+            var flag=false
+            for(var i=0;i<all_users.length;i++){
+                if((all_users[i]==username)&&(db[all_users[i]]==password)){
+                    flag=true
+                }
+            }
+            if(flag==true){
+                window.location.href="./home.html"
+            }else{
+document.getElementById("error").innerHTML="Invalid Username or Incorrect Password!!!"
+            }
+        }
+    </script>
+</head>
+<body>
+   
+    <div>
+        <h1 style="font-size: 50px;" style="font-family:cambria;"><u>The Unique Farm House</u></h1>
+        <h2>WELCOME TO UNIQUE FARM HOUSE</h2>
+        <img src="./icon.webp" alt="LOGIN" height="100" width="100px">
+        <table>
+       
+            <tr>
+                <td><label style="font-size: xx-large; color:rgba(20, 1, 1, 0.973);" ></label></td>
+                <td><input id="username" type="text" placeholder="Username" style="font-size: x-large;"></td>
+            </tr>
+            <tr>
+                <td><label style="font-size: xx-large; color:rgb(17, 1, 1)"></td>
+                <td><input id="password" type="password"placeholder="Password" style="font-size: x-large;"></td>
+            </tr>
+            <tr>
+                <td><button onclick="login_Validation()"  style="font-size: x-large;">LOGIN</button></td>    
+                <td><button type="reset" style="font-size: x-large;"><a href="./index.html">Cancel</a></button></td>
+           </tr>
+          
+           <tr>
+               <td style="font-size: x-large;"><a href="./registration.html" style="color: black;"> New user</a></td>
+               <td style="font-size: x-large;"><a href="./forgotpassword.html" style="color: black;">Forgot password? </a></td>
+          </tr>
+    </table>
+    <p id="error"></p>
+    </div>
+</body>
+</html>

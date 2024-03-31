@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELLER LOGIN</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="shortcut icon" href="./icon.webp"/>
+
+    <script>
+        
+    </script>
+
+    <style>
+        #header,#d1,#d2{
+            padding: 10px;
+            text-decoration: none;
+            font-size: larger;
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+            background-color: rgba(255, 68, 0, 0.26);
+        }
+        #d1{
+            padding-left: 1250px;
+        }
+        h1{
+            margin-left: 600px;
+            font-variant: small-caps;
+        }
+        #body{
+            margin-left: 50px;
+            color:gray;
+            width: fit-content;
+            
+        }
+        #f1{
+            margin-left: 500px;
+            width: 500px;
+            font-size: x-large;
+            color:brown;
+            border-color: orangered;
+            border-radius: 5px;
+            border-width: 3px;    
+        }
+        input{
+            width: 200px;
+            font-size: 20px;
+            border-radius: 10px;
+            border-color: orangered;
+        }
+        button{
+            margin-left: 200px;
+            margin-top: 30px;
+            background-image: linear-gradient(to right,rgba(255,0,0,0), rgba(258,0,0,1));
+            text-decoration: none;
+            font-size: medium;
+            border-radius: 10px;
+        }
+        #r1{
+            text-decoration: none;
+            font-size: medium;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="header">
+        <a href="./home.html" id="d1">HOME <i class="fa-solid fa-caret-down"></i></a>
+        <a href="./index.html"id="d2">LOGIN <i class="fa-solid fa-caret-down"></i></a>
+        <a href="./aboutus.html" id="d2">ABOUTUS <i class="fa-solid fa-caret-down"></i></a>
+        <h1>The unique <i class="fa-solid fa-tractor" style="color: gray;"></i> farm house</h1>
+    </div>
+    <div class="body">
+        <h1 id="body" style="font-size:100px;"><em>Sell</em><br><strong style="color: orangered;"> Your Products</strong></h1>
+        <img src="https://c4.wallpaperflare.com/wallpaper/742/963/615/vegetables-basket-green-background-garden-wallpaper-preview.jpg" style="margin-top: -50px;">
+    </div>
+    <div id="f1" style="margin-top: -600px;">
+    <fieldset id="f1">
+        <legend>SELLER DETAILS</legend>
+        <table>
+            <tr>
+               <td><label>Name <sup style="color: red;">*</sup></label></td>
+              <td><input type="text" placeholder="Name"></td>
+            </tr>   
+            <br>
+            <tr>
+               <td><label>Mobile<sup style="color: red;">*</sup></label></td>
+               <td><input type="number" placeholder="Number"></td>
+            </tr>
+            <tr>
+                <td><label>Email <sup style="color: red;">*</sup></label></td>
+                <td><input type="email" placeholder="email"></td>
+            </tr>
+            <tr>
+                <td><label>D.O.B</label></td>
+                <td><input type="datetime-local" placeholder="Number"></td>
+             </tr>
+             <tr>
+                <td><label>Type of product<sup style="color: red;">*</sup></label></td>
+                <td><select style="font-size:20px;border-color:orangered;border-radius:10px;width:200px;color:gray">
+                    <option>select</option>
+                    <option>Fruit</option>
+                    <option>Vegetable</option>
+                    <option>Dhals</option>
+                </select></td>
+             </tr>
+            <tr>
+                <td>
+                    <label>Address proof</label>
+                </td>
+                <td> <input type="file" value="choose file">  </td>
+            </tr>
+             <tr>
+                <td>
+                    <label>Product weight</label>
+                </td>
+                <td><input type="number" placeholder="In KG"></td>
+             </tr>
+             <tr>
+                <td>
+                    <label>Product Image</label>
+                </td>
+                <td><input type="file" value="image"></td>
+             </tr>
+        </table>
+        <button><a href="./grocerylist.html" id="r1">SUBMIT</a></button>
+    </fieldset>
+    </div>
+    
+</body>
+</html>
